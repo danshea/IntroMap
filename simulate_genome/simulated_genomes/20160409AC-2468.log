@@ -1,0 +1,25 @@
+Seed set to 2468 for this run
+Number of regions chosen was 6
+Regions chosen was:
+1988	A05	1516503..1746588	-	C09	39340388..39993084
+Regions chosen was:
+1956	A03	15808920..16674907	-	C09	12981428..17256968
+Regions chosen was:
+1438	A02	9651462..10224233	-	C06	4427196..5255742
+Regions chosen was:
+472	A03	15447774..16682343	+	C03	13895784..16558399
+Regions chosen was:
+1930	A02	19870923..20369469	-	C09	2435306..2774598
+Regions chosen was:
+1823	A08	2109335..2411961	-	C08	21174904..21922281
+Loaded ./simulate_genome/reference_genomes/bra.fa as background genome
+Loaded ./simulate_genome/reference_genomes/bol.fa as introgression genome
+Creating 20160409AC-2468.fasta
+Introgression from C09(2435306..2774598) into A02 on strand - at (19870923..20369469)
+Introgression from C09(39340388..39993084) into A05 on strand - at (1516503..1746588)
+Introgression from C06(4427196..5255742) into A02 on strand - at (9651462..10224233)
+Introgression from C09(12981428..17256968) into A03 on strand - at (15808920..16674907)
+Introgression from C08(21174904..21922281) into A08 on strand - at (2109335..2411961)
+Introgression from C03(13895784..16558399) into A03 on strand + at (15447774..16682343)
+Introgressions completed, writing out to file 20160409AC-2468.fasta
+10 records written
