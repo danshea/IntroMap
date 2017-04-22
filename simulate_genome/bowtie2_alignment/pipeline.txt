@@ -1,0 +1,21 @@
+2016-04-03
+
+1. Build the bowtie2 index
+
+bowtie2-build bra.fa bra
+
+2. Run the alignment
+
+aln.sh
+
+3. Convert the results from SAM to BAM
+
+samtools view -Sbh 174-12-26-1-28280253.bra.bowtie2.sam > 174-12-26-1-28280253.bra.bowtie2.bam
+
+4. Sort the results
+
+samtools sort 174-12-26-1-28280253.bra.bowtie2.bam 174-12-26-1-28280253.bra.bowtie2.sorted
+
+5. Remove duplicates
+
+samtools rmdup 174-12-26-1-28280253.bra.bowtie2.sorted.bam 174-12-26-1-28280253.bra.bowtie2.sorted.nodups.bam
