@@ -1,0 +1,34 @@
+Seed set to 6121824 for this run
+Number of regions chosen was 9
+Regions chosen was:
+574	C03	21661066..22404600	-	A05	2790255..3246712
+Regions chosen was:
+923	C04	21916455..23737811	-	A09	11625941..12575344
+Regions chosen was:
+1146	C07	44724332..46839490	+	A01	3873..2458857
+Regions chosen was:
+1770	C08	21174904..21922281	+	A07	3002685..3492742
+Regions chosen was:
+400	C03	456458..916898	+	A01	21446681..21841756
+Regions chosen was:
+171	C01	1201223..2104238	+	A09	15466454..16093472
+Regions chosen was:
+130	C01	20244005..22031136	-	A06	4989584..5388940
+Regions chosen was:
+1295	C07	20489907..23992051	-	A07	4019583..5324176
+Regions chosen was:
+675	C03	45874901..46866351	+	A09	4711174..5223726
+Loaded ./simulate_genome/reference_genomes/bol.fa as background genome
+Loaded ./simulate_genome/reference_genomes/bra.fa as introgression genome
+Creating 20170428CA-6121824.fasta
+Introgression from A09(11625941..12575344) into C04 on strand - at (21916455..23737811)
+Introgression from A09(15466454..16093472) into C01 on strand + at (1201223..2104238)
+Introgression from A07(3002685..3492742) into C08 on strand + at (21174904..21922281)
+Introgression from A06(4989584..5388940) into C01 on strand - at (20244005..22031136)
+Introgression from A05(2790255..3246712) into C03 on strand - at (21661066..22404600)
+Introgression from A09(4711174..5223726) into C03 on strand + at (45874901..46866351)
+Introgression from A01(3873..2458857) into C07 on strand + at (44724332..46839490)
+Introgression from A01(21446681..21841756) into C03 on strand + at (456458..916898)
+Introgression from A07(4019583..5324176) into C07 on strand - at (20489907..23992051)
+Introgressions completed, writing out to file 20170428CA-6121824.fasta
+9 records written

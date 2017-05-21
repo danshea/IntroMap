@@ -1,0 +1,22 @@
+Seed set to 5101520 for this run
+Number of regions chosen was 5
+Regions chosen was:
+1914	C09	37547975..37964519	+	A02	5575..201797
+Regions chosen was:
+240	C02	9695801..10775648	-	A02	5551257..6247434
+Regions chosen was:
+2022	C09	20937150..21835170	+	A07	728035..929853
+Regions chosen was:
+1262	C07	35885628..36777587	+	A06	23247913..24017975
+Regions chosen was:
+2083	C09	27967024..32004612	-	A10	6145708..8231502
+Loaded ./simulate_genome/reference_genomes/bol.fa as background genome
+Loaded ./simulate_genome/reference_genomes/bra.fa as introgression genome
+Creating 20170428CA-5101520.fasta
+Introgression from A02(5551257..6247434) into C02 on strand - at (9695801..10775648)
+Introgression from A07(728035..929853) into C09 on strand + at (20937150..21835170)
+Introgression from A10(6145708..8231502) into C09 on strand - at (27967024..32004612)
+Introgression from A06(23247913..24017975) into C07 on strand + at (35885628..36777587)
+Introgression from A02(5575..201797) into C09 on strand + at (37547975..37964519)
+Introgressions completed, writing out to file 20170428CA-5101520.fasta
+9 records written
