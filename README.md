@@ -7,7 +7,7 @@ Introgression screening software IntroMap
 Please contact me (Dan Shea) if you have any questions regarding the use of IntroMap.  
 
 I have tried to document the use of the software in the Jupyter notebook, as well as in a paper that we have recently
-submitted to Genetics for peer review. Our goal is to create software that will assist with (or possibly replace) marker
+submitted to ~~Genetics~~ G3 for peer review. (UPDATE 2017.06.08 - The manuscript has been transferred to the sister journal G3) Our goal is to create software that will assist with (or possibly replace) marker
 based assays for the screening of interspecific hybrids. If the paper is accepted I'll provide the information for citation
 should you decide to employ this software in your own research.
 
