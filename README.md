@@ -80,3 +80,63 @@ optional arguments:
 If you use IntroMap, please consider citing our paper.
 </pre>
 
+Here is a sample invocation of `IntroMap.py` using our \#174-12-26 genome data and the accompanying output.
+
+<pre>
+(IntroMap) $ ./IntroMap.py -i ../bowtie2_alignment/against_bra/174-12-26-1-28280253.bra.bowtie2.sorted.nodups.bam -r ../bowtie2_alignment/against_bra/bra.fa -o 174-12-26-1-28280253.out
+63536100 Alignment records were processed from ../bowtie2_alignment/against_bra/174-12-26-1-28280253.bra.bowtie2.sorted.nodups.bam using Reference ../bowtie2_alignment/against_bra/bra.fa
+20825947 records were processed for A08
+38883802 records were processed for A09
+16404182 records were processed for A10
+26938828 records were processed for A02
+31764690 records were processed for A03
+26790030 records were processed for A01
+25209370 records were processed for A06
+25875098 records were processed for A07
+19268591 records were processed for A04
+25302534 records were processed for A05
+A02     228453  6213700
+A09     1       3703909
+</pre>
+
+And here are the files that are created as a result of running `IntroMap.py`.
+
+<pre>
+-rw-rw-r-- 1 dshea dshea 398873704 11月 13 18:42 A01.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 18:44 A01.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    108824 11月 13 18:44 A01_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 401089206 11月 13 18:41 A02.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea        19 11月 13 19:04 A02.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea     96351 11月 13 19:04 A02_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 472940725 11月 13 18:42 A03.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:08 A03.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    125827 11月 13 19:08 A03_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 286888025 11月 13 18:44 A04.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:17 A04.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    116349 11月 13 19:17 A04_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 376726291 11月 13 18:44 A05.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:42 A05.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    118286 11月 13 19:42 A05_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 375339187 11月 13 18:43 A06.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:43 A06.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    124054 11月 13 19:43 A06_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 385251390 11月 13 18:43 A07.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:51 A07.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    117447 11月 13 19:51 A07_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 310074562 11月 13 18:40 A08.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:51 A08.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    116213 11月 13 19:52 A08_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 578936471 11月 13 18:41 A09.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea        14 11月 13 19:55 A09.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea     93137 11月 13 19:55 A09_174-12-26-1-28280253_out_predicted.png
+-rw-rw-r-- 1 dshea dshea 244240188 11月 13 18:41 A10.174-12-26-1-28280253.out
+-rw-rw-r-- 1 dshea dshea         0 11月 13 19:55 A10.174-12-26-1-28280253.out.predicted.out
+-rw-rw-r-- 1 dshea dshea    120184 11月 13 19:55 A10_174-12-26-1-28280253_out_predicted.png
+</pre>
+
+The `*.predicted.out` files hold identified introgressed loci coordinates for a chromosome.  
+<pre>
+(IntroMap) $ cat A02.174-12-26-1-28280253.out.predicted.out
+A02     228453  6213700
+</pre>
+And the _chrN_._outpostfix_.out files hold the homology scores at each position for the locally weighted linear regressions. Currently, the cli version re-generates these each time, but because this is a costly computational operation, we plan to add the option to re-plot from previously generated runs out files. Currently, this can be done using the Jupyter notebook. Instructions on how to do so are provided in the notebook cell that generates the plots.
