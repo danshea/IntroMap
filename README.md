@@ -43,3 +43,40 @@ To create an environment using a supplied file, run:
 
 To activate the new environment:  
 `source activate IntroMap`
+
+## Once you have an environment installed and activated, you can either run the Notebook or try the cli version
+The cli version is `IntroMap.py`.  
+First give it proper executable permissions i.e. - `chmod 755 IntroMap.py`  
+Then, invoke it as follows to see the command line options i.e. - `./IntroMap.py -h`  
+You should see the following output:  
+
+<pre>
+(IntroMap) $ ./IntroMap.py -h                                                                                                                                                                                                                    
+usage: IntroMap.py [-h] -i INFILE -r REFERENCE -o OUTFILE [-t THRESHOLD]
+                   [-b {True,False}] [-f FRAC]
+
+IntroMap
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INFILE, --infile INFILE
+                        The name of the BAM file to be examined.
+  -r REFERENCE, --reference REFERENCE
+                        The reference genome used for the aligned BAM file.
+  -o OUTFILE, --outfile OUTFILE
+                        The output filename format. Example: -o lowess would
+                        create chr1.lowess to chrN.lowess outputs.
+  -t THRESHOLD, --threshold THRESHOLD
+                        The threshold value used by the binary classifier.
+                        Default is 0.90
+  -b {True,False}, --below {True,False}
+                        Boolean flag for the threshold. True = report regions
+                        below the threshold. False = report regions at or
+                        above threshold. Default is True
+  -f FRAC, --frac FRAC  The windowsize used when performing the locally
+                        weighted linear regression, given as a fraction of the
+                        chromosome length. Default is 0.05
+
+If you use IntroMap, please consider citing our paper.
+</pre>
+
