@@ -1,5 +1,7 @@
 Dan Shea  
 2017.06.07  
+Niigata University, Graduate School of Science and Technology  
+Laboratory of Plant Breeding
 
 # IntroMap
 Introgression screening software IntroMap
@@ -139,4 +141,4 @@ The `*.predicted.out` files hold identified introgressed loci coordinates for a 
 (IntroMap) $ cat A02.174-12-26-1-28280253.out.predicted.out
 A02     228453  6213700
 </pre>
-And the _chrN_._outpostfix_.out files hold the homology scores at each position for the locally weighted linear regressions. Currently, the cli version re-generates these each time, but because this is a costly computational operation, we plan to add the option to re-plot from previously generated runs out files. Currently, this can be done using the Jupyter notebook. Instructions on how to do so are provided in the notebook cell that generates the plots.
+And the _chrN_._outpostfix_.out files hold the homology scores at each position for the locally weighted linear regressions. Currently, the cli version re-generates these each time, but because this is a costly computational operation, we plan to add the option to re-plot from a previously generated run's out files. Currently, this can be done using the Jupyter notebook. Instructions on how to do so are provided in the notebook cell that generates the plots.
