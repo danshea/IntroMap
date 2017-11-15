@@ -13,6 +13,8 @@ submitted to BMC Genetics for peer review. Our goal is to create software that w
 based assays for the screening of interspecific hybrids. If the paper is accepted I'll provide the information for citation
 should you decide to employ this software in your own research.
 
+__(Update 2017.11.15)__ Our paper was accepted and is currently in press, we will update with information regarding citation once it is available. :-)
+
 If you find the software useful, or you have any ideas on how we can improve the methodology, please feel
 free to drop us a line. One of the functions we would like to add is automation of the parameter tuning step.
 
