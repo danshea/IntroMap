@@ -142,3 +142,91 @@ The `*.predicted.out` files hold identified introgressed loci coordinates for a 
 A02     228453  6213700
 </pre>
 And the _chrN_._outpostfix_.out files hold the homology scores at each position for the locally weighted linear regressions. Currently, the cli version re-generates these each time, but because this is a costly computational operation, we plan to add the option to re-plot from a previously generated run's out files. Currently, this can be done using the Jupyter notebook. Instructions on how to do so are provided in the notebook cell that generates the plots.
+
+## To make simulated hybrid files
+The cli version is `makeSimulatedHyrbids.py`.  
+First give it proper executable permissions i.e. - `chmod 755 makeSimulatedHyrbids.py`  
+Then, invoke it as follows to see the command line options i.e. - `./makeSimulatedHyrbids.py -h`  
+You should see the following output:  
+
+<pre>
+(IntroMap) $ ./IntroMap.py -h ./makeSimulatedHybrids.py -h
+usage: makeSimulatedHybrids.py [-h] -b BACKGROUND -i INTROGRESSION -f SYNTENY
+                               -o OUTPREFIX -s SEED
+
+makeSimulatedHybrids
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -b BACKGROUND, --background BACKGROUND
+                        The reference FASTA file of the recurrent parent. i.e.
+                        - The genomic background.
+  -i INTROGRESSION, --introgression INTROGRESSION
+                        The reference FASTA file of the donor parent. i.e. -
+                        The introgressed genome.
+  -f SYNTENY, --synteny SYNTENY
+                        The file that contains syntenic regions between the
+                        recurrent and donor parents.
+  -o OUTPREFIX, --outprefix OUTPREFIX
+                        The output prefix for the resulting FASTA file.
+  -s SEED, --seed SEED  Seed for the psuedo-random number generator.
+
+If you use IntroMap, please consider citing our paper.
+</pre>
+
+Here is a sample invocation of `makeSimulatedHybrids.py` using the _B. rapa_ reference genome as the recurrent parent and the _B. oleracea_ reference genome as the donor parent. The synteny file is `bra_bol.synteny.txt` (available in this repository) and the seed is `1234`. This command generates the first _in silico_ simulated genome in our paper.
+
+<pre>
+(IntroMap) $ ./makeSimulatedHybrids.py -b bra.fa -i bol.fa -f bra_bol.synteny.txt -o 20160409AC -s 1234
+</pre>
+
+And here are the files that are created as a result of running `makeSimulatedHybrids.py`.
+
+<pre>
+-rw-rw-r-- 1 dshea dshea 261561132 11月 15 12:34 20160409AC-1234.fasta
+-rw-rw-r-- 1 dshea dshea      1893 11月 15 12:34 20160409AC-1234.log
+</pre>
+
+The log file details what actions were taken to create the simulated offspring genome.
+
+<pre>
+Seed set to 1234 for this run
+Number of regions chosen was 10
+Regions chosen was:
+1032    A05     1807789..2033581        -       C05     31526112..31982340
+Regions chosen was:
+9       A01     9211784..10335042       -       C01     12232952..14237322
+Regions chosen was:
+1839    A09     2045293..2216917        +       C08     38928810..39231776
+Regions chosen was:
+199     A10     4330802..4888598        +       C01     37419658..37771661
+Regions chosen was:
+1754    A06     746631..1074713 -       C08     16290549..17296760
+Regions chosen was:
+1552    A07     14874245..15217639      +       C06     1974136..2504081
+Regions chosen was:
+1640    A01     7712173..7995215        +       C08     15163710..15369992
+Regions chosen was:
+1580    A08     2097326..2988508        +       C06     31441768..34193489
+Regions chosen was:
+756     A03     25457894..25982378      +       C04     3685376..4865003
+Regions chosen was:
+400     A01     21446681..21841756      +       C03     456458..916898
+Loaded bra.fa as background genome
+Loaded bol.fa as introgression genome
+Creating 20160409AC-1234.fasta
+Introgression from C03(456458..916898) into A01 on strand + at (21446681..21841756)
+Introgression from C01(12232952..14237322) into A01 on strand - at (9211784..10335042)
+Introgression from C05(31526112..31982340) into A05 on strand - at (1807789..2033581)
+Introgression from C08(38928810..39231776) into A09 on strand + at (2045293..2216917)
+Introgression from C06(1974136..2504081) into A07 on strand + at (14874245..15217639)
+Introgression from C04(3685376..4865003) into A03 on strand + at (25457894..25982378)
+Introgression from C08(16290549..17296760) into A06 on strand - at (746631..1074713)
+Introgression from C06(31441768..34193489) into A08 on strand + at (2097326..2988508)
+Introgression from C08(15163710..15369992) into A01 on strand + at (7712173..7995215)
+Introgression from C01(37419658..37771661) into A10 on strand + at (4330802..4888598)
+Introgressions completed, writing out to file 20160409AC-1234.fasta
+10 records written
+</pre>
+
+The file `20160409AC-1234.fasta` is the FASTA file that contains the simulated genome.
