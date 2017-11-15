@@ -144,9 +144,9 @@ A02     228453  6213700
 And the _chrN_._outpostfix_.out files hold the homology scores at each position for the locally weighted linear regressions. Currently, the cli version re-generates these each time, but because this is a costly computational operation, we plan to add the option to re-plot from a previously generated run's out files. Currently, this can be done using the Jupyter notebook. Instructions on how to do so are provided in the notebook cell that generates the plots.
 
 ## To make simulated hybrid files
-The cli version is `makeSimulatedHyrbids.py`.  
-First give it proper executable permissions i.e. - `chmod 755 makeSimulatedHyrbids.py`  
-Then, invoke it as follows to see the command line options i.e. - `./makeSimulatedHyrbids.py -h`  
+The cli version is `makeSimulatedHybrids.py`.  
+First give it proper executable permissions i.e. - `chmod 755 makeSimulatedHybrids.py`  
+Then, invoke it as follows to see the command line options i.e. - `./makeSimulatedHybrids.py -h`  
 You should see the following output:  
 
 <pre>
