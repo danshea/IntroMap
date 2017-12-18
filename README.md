@@ -15,6 +15,12 @@ should you decide to employ this software in your own research.
 
 __(Update 2017.11.15)__ Our paper was accepted and is currently in press, we will update with information regarding citation once it is available. :-)
 
+__(Update 2017.12.18)__ The citation information is given below. If you use our software, please consider citing the paper in your publication.
+
+<cite>
+Shea, D.J.,  M. Shimizu, N. Nishida, E. Fukai, T. Abe, R. Fujimoto and K. Okazaki (2017) IntroMap: a signal analysis based method for the detection of genomic introgressions. BMC Genetics 18:101 https://doi.org/10.1186/s12863-017-0568-5
+</cite>
+
 If you find the software useful, or you have any ideas on how we can improve the methodology, please feel
 free to drop us a line. One of the functions we would like to add is automation of the parameter tuning step.
 
