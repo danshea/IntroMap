@@ -47,6 +47,9 @@ import sys
 from Bio import SeqIO
 import pysam
 import re
+# 2019.07.01 Added to resolve issue with QT5 being selected as the backend and matplotlib not working
+import matplotlib
+matplotlib.use('QT4Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import statsmodels.api as sm
@@ -60,8 +63,13 @@ def createMatchVector(alignedSegment):
     '''return a list of 1 (match) and 0 (mismatch) based on MD tag of the alignedSegment'''
     matchVector = list()
     buff = list()
+    # 2019.07.01 - Updated to raise an error and exit if the alignedSegment does not contain an MD tag
+    #              as some aligners do not generate this tag.
     if alignedSegment.has_tag('MD'):
         mdString = alignedSegment.get_tag('MD')
+    else:
+        print 'ERROR: No MD tag found! Please ensure that your aligner generated MD tags.'
+        sys.exit(1)
     for c in mdString:
         if re.match('[0-9]', c):
             buff.append(c)
@@ -305,8 +313,14 @@ def main():
                         help='Boolean flag for the threshold. True = report regions below the threshold. False = report regions at or above threshold. Default is True')
     parser.add_argument('-f', '--frac', type=float, default=0.05, dest='frac',
                         help='The windowsize used when performing the locally weighted linear regression, given as a fraction of the chromosome length. Default is 0.05')
+    parser.add_argument('-p', '--pre', type=str, nargs='+', default=None, dest='lowessfiles',
+                        help='A list of pre-computed lowessfiles to use for plotting.')
+
     args = parser.parse_args()
-    infiles = writeLowessToFiles(args.infile, args.reference, args.outfile, frac=args.frac)
+    if args.lowessfiles == None:
+        infiles = writeLowessToFiles(args.infile, args.reference, args.outfile, frac=args.frac)
+    else:
+        infiles = [lowessfile for lowessfile in args.lowessfiles]
     plotFromLowessFiles(infiles, below=args.below, threshold=args.threshold)
     sys.exit(0)
 
