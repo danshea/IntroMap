@@ -1,0 +1,107 @@
+name: IntroMap
+channels:
+- bioconda
+- r
+- defaults
+dependencies:
+- bcftools
+- htslib
+- pysam
+- samtools
+- backports
+- backports_abc
+- biopython
+- bleach
+- cairo
+- configparser
+- curl
+- cycler
+- dbus
+- decorator
+- entrypoints
+- enum34
+- expat
+- fontconfig
+- freetype
+- functools32
+- get_terminal_size
+- glib
+- gst-plugins-base
+- gstreamer
+- html5lib
+- icu
+- ipykernel
+- ipython
+- ipython_genutils
+- jinja2
+- jpeg
+- jsonschema
+- jupyter_client
+- jupyter_core
+- libffi
+- libgcc
+- libgfortran
+- libiconv
+- libpng
+- libsodium
+- libxcb
+- libxml2
+- markupsafe
+- matplotlib
+- mistune
+- mkl
+- nbconvert
+- nbformat
+- notebook
+- numpy
+- openssl
+- pandas
+- pandocfilters
+- path.py
+- pathlib2
+- patsy
+- pcre
+- pexpect
+- pickleshare
+- pip
+- pixman
+- prompt_toolkit
+- ptyprocess
+- pycairo
+- pygments
+- pyparsing
+- pyqt
+- python
+- python-dateutil
+- pytz
+- pyzmq
+- qt
+- readline
+- scandir
+- scipy
+- setuptools
+- simplegeneric
+- singledispatch
+- sip
+- six
+- sqlite
+- ssl_match_hostname
+- statsmodels
+- subprocess32
+- terminado
+- testpath
+- tk
+- tornado
+- traitlets
+- wcwidth
+- wheel
+- zeromq
+- zlib
+- pip:
+  - backports-abc
+  - backports.shutil-get-terminal-size
+  - backports.ssl-match-hostname
+  - ipython-genutils
+  - jupyter-client
+  - jupyter-core
+  - prompt-toolkit
