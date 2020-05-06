@@ -17,6 +17,8 @@ __(Update 2017.11.15)__ Our paper was accepted and is currently in press, we wil
 
 __(Update 2017.12.18)__ The citation information is given below. If you use our software, please consider citing the paper in your publication.
 
+__(Update 2020.05.06)__ I have added a copy of the conda environment YAML file that does not include versions for the required libraries. This file should be able to create a conda environment for IntroMap to run in without specifying a version. However, since I haven't tested the software with any versions other than those provided in the original file, I make no guarantees regarding any other issues that may be caused by using this file.
+
 <cite>
 Shea, D.J.,  M. Shimizu, N. Nishida, E. Fukai, T. Abe, R. Fujimoto and K. Okazaki (2017) IntroMap: a signal analysis based method for the detection of genomic introgressions. BMC Genetics 18:101 https://doi.org/10.1186/s12863-017-0568-5
 </cite>
